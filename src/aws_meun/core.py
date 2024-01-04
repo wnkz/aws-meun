@@ -19,8 +19,8 @@ async def unsubscribe_all_async(
             tasks.append(unsubscribe_async(email, client))
         responses = await asyncio.gather(*tasks)
 
-    for email, reponse in zip(emails, responses):
-        yield (email, reponse)
+    for email, response in zip(emails, responses):
+        yield (email, response)
 
 
 def unsubscribe_all(
